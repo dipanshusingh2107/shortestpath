@@ -4,9 +4,13 @@
 using namespace std;
 
 
-void shortest_path(list<pair<int,int>> graph[],int src,int dest,int n)
+void shortest_path(list< pair<int,int> > graph[],int src,int dest,int n)
 {
-    long long int distance[n+1]={9999999};  //distance of i node from source
+    long long int distance[n+1];  //distance of i node from source
+
+    for(int i=0;i<=n;i++)    //setting value to infinity
+    distance[i]=9999999;
+
     distance[src]=0;
     int parent[n+1];
     parent[src]=-1;
@@ -37,8 +41,8 @@ int main()
     cout<<"enter no. of edges";
     cin>>e;
 
-    list<pair<int,int>>graph[n+1];
-
+    list<pair<int,int> >graph[n+1];
+ cout<<"Enter Edges u and v and Weights w \n";
     for(int i=1,u,v,w;i<=e;i++)
     {
         cin>>u>>v>>w;
