@@ -39,7 +39,8 @@ void shortest_path(list< pair<int,int> > graph[],int src,int dest,int n)
     int parent[n+1];
     parent[src]=-1;
 
-
+    for(int i=1;i<n;i++)
+    {
     for(int i=1;i<=n;i++)
     {
         for(auto j:graph[i])           // i->j.first   i links to j.first 
@@ -51,7 +52,7 @@ void shortest_path(list< pair<int,int> > graph[],int src,int dest,int n)
             }
         }
     } 
-
+    }
         cout<<"min weight: "<<distance[dest]<<endl;
         path(parent,dest);
 }
