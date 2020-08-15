@@ -3,6 +3,7 @@
         "__split_buffer": "cpp",
         "list": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "stack": "cpp"
     }
 }

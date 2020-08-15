@@ -1,7 +1,31 @@
 #include<iostream>
 #include<list>
 #include<utility>
+#include<stack>
 using namespace std;
+
+void path(int parent[],int dest)
+{
+    stack<int>st;
+    st.push(dest);
+    int i=dest;
+    while(i!=-1)
+    {
+        i=parent[i];
+        st.push(i);
+    }
+    st.pop();
+
+    while(!st.empty())
+    {
+        cout<<st.top()<<"->";
+        st.pop();
+    }
+    cout<<"end";
+}
+
+
+
 
 
 void shortest_path(list< pair<int,int> > graph[],int src,int dest,int n)
@@ -28,8 +52,8 @@ void shortest_path(list< pair<int,int> > graph[],int src,int dest,int n)
         }
     } 
 
-        cout<<"min weight: "<<distance[dest];
-
+        cout<<"min weight: "<<distance[dest]<<endl;
+        path(parent,dest);
 }
 
 
