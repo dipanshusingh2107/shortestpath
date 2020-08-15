@@ -46,8 +46,12 @@ int main()
     for(int i=1,u,v,w;i<=e;i++)
     {
         cin>>u>>v>>w;
-        graph[u].push_back({v,w});
-        graph[v].push_back({u,w});
+        pair<int,int>p1;
+        p1.first=v;
+        p1.second=w;
+        graph[u].push_back(p1);
+        p1.first=u;
+        graph[v].push_back(p1);
     }
     int src,dest;
     cout<<"Enter source and dest ";
