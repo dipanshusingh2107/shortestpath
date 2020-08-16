@@ -39,7 +39,7 @@ void shortest_path(list< pair<int,int> > graph[],int src,int dest,int n)
     int parent[n+1];
     parent[src]=-1;
 
-    for(int i=1;i<n;i++)
+    for(int k=1;k<n;k++)
     {
     for(int i=1;i<=n;i++)
     {
